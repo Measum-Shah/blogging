@@ -18,11 +18,11 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: 'https://nicheenest.netlify.app/',
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
-);
+);c
 
 app.use(cookieParser());
 app.use(express.json());
