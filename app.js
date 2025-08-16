@@ -29,7 +29,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(
-  fileUpload({
+
+fileUpload({
     useTempFiles: true,
     tempFileDir: "/tmp/",
   })
@@ -38,6 +39,10 @@ app.use(
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application", applicationRouter);
+app.get("/", (req, res) => {
+  res.send("✅ Deployment is working!");
+});
+
 
 // newsLetterCron()
 connection();
