@@ -22,7 +22,7 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
-);c
+);
 
 app.use(cookieParser());
 app.use(express.json());
