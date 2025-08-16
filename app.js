@@ -18,7 +18,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: `nicheenest.netlify.app`,
+    origin: `https://nicheenest.netlify.app`,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
